@@ -11,7 +11,6 @@ public class DiagonalDifference {
 		int row = scan.nextInt();
 		int[][] array = new int[row][row];
 		int sum2 = 0, sum1 = 0, length = array.length;
-		System.out.println(length);
 
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array.length; j++) {
@@ -23,8 +22,7 @@ public class DiagonalDifference {
 			sum1 += array[i][i];
 			sum2 += array[length-1-i][i];
 		}
-		System.out.println(sum1);
-		System.out.println(sum2);
+		
 		System.out.println(Math.abs(sum1-sum2));
 
 	}
