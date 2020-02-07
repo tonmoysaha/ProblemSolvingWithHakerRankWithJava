@@ -1,6 +1,5 @@
 package com.problemsolving;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MiniMaxSum {
