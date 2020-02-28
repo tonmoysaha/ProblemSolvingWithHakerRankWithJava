@@ -1,4 +1,4 @@
-package com.stack;
+package com.datastructure.stack;
 
 public class Stack {
 
@@ -31,6 +31,9 @@ public class Stack {
 		System.out.print(stack.pop());
 		System.out.println();
 		System.out.print(stack.pop());
+		
+		System.out.println();
+	    stack.deleteStack();
 		
 
 		

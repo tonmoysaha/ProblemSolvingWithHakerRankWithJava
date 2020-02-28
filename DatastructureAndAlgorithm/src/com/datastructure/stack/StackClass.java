@@ -1,4 +1,4 @@
-package com.stack;
+package com.datastructure.stack;
 
 public class StackClass {
 
@@ -54,5 +54,13 @@ public class StackClass {
 	public int peek() {
 		int data = stack[top-1];
 		return data;
+	}
+	
+	public void deleteStack() {
+		stack = null;
+		if (stack == null) {
+			System.out.println("Stack delted succssfully");
+		}
+
 	}
 }
