@@ -12,22 +12,25 @@ public class Kangaroo {
 		int x2 = scanner.nextInt();
 		int v2 = scanner.nextInt();
 
-		System.out.println(kangaroo(x1, v1, x2, v2)); 
+		System.out.println(kangaroo(x1, v1, x2, v2));
 	}
-	
+
 	static String kangaroo(int x1, int v1, int x2, int v2) {
-        int sum1 =0, sum2 =0;
-		for (int i = x1; i < 13; i+=v1) {
-			 sum1 = v1 + i;
+
+		int k1 = x1, k2 =x2;
+		if (x2 > x1 && v2 > v1) {
+			return "NO";
 		}
-		for (int i = x2; i < 13; i+=v2) {
-			 sum2 = v1 + i;
-		}
-		if (sum1 == sum2) {
-			return "YES";
+		for (int i = 0; i < 10000; i++) {
+
+			k1 += v1;
+			k2 += v2;
+			if (k1 == k2) {
+				return "YES";
+			}
+			
 		}
 		return "NO";
-
-    }
+	}
 
 }
