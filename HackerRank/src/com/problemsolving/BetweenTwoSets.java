@@ -1,5 +1,6 @@
 package com.problemsolving;
 
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -14,34 +15,39 @@ public class BetweenTwoSets {
 		Vector<Integer> b = new Vector<Integer>();
 		
 		for (int i = 0; i < m; i++) {
-			int data = scanner.nextInt();
-			a.add(data);
+			a.add(scanner.nextInt());
 		}
 		
 		
 		for (int i = 0; i < n; i++) {
-			int data = scanner.nextInt();
-			b.add(data);
+			b.add(scanner.nextInt());
 		}
 		
 		System.out.println(getTotalX(a, b));
 	}
 	
-	static int getTotalX(Vector<Integer> a, Vector<Integer> b) {
-		Vector<Integer> divid= new Vector<Integer>();
-		int count=0;
-		for (Integer bb : b) {
-			for (Integer aa : a) {
-				if (bb%aa == 0) {
-					Integer value= bb/aa;
-					System.out.println(value);
-                    divid.add(value);
-				}
-			}
-			
-		}
-		return count;
+	public static int getTotalX(Vector<Integer> a, Vector<Integer> b) {
+	    Collections.sort(a);
+	    Collections.sort(b);
+	    int maxA = a.get(a.size()-1);
+	    int minB = b.get(0);
+	    int totalX = 0;
+	    int currentVal = maxA;
+	    while(currentVal <= minB) {
+	        final int current = currentVal; 
 
+	        if(a.stream().allMatch(e->current % e == 0 || e % current == 0) &&
+	            b.stream().allMatch(e->current % e == 0 || e % current == 0)) {
+	                totalX++;
+	        }
+
+	        currentVal += maxA;
+	    }
+	    return totalX;
 	}
 
+
 }
+//2 3
+//2 4
+//16 32 96
