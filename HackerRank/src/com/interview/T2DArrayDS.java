@@ -21,7 +21,7 @@ public class T2DArrayDS {
 
 	static int hourglassSum(int[][] arr) {
 		
-		int max = 0;
+		int max = Integer.MIN_VALUE;
 		
 		for (int i = 0; i < 6-2; i++) {
 			for (int j = 0; j < 6-2; j++) {
