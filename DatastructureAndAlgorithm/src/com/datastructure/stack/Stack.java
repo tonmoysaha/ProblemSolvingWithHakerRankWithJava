@@ -16,6 +16,7 @@ public class Stack {
 		
 		System.out.println("\npeek value");
 		System.out.println(stack.peek());
+		System.out.println(stack.peek());
 		
 		System.out.println("\npop value");
 		System.out.print(stack.pop());
