@@ -34,12 +34,11 @@ public class Generics {
 class Printer<T> {
 
 	public void printArray(T[] intArray) {
-		
-	       for (int i = 0; i < intArray.length; i++) {
+
+		for (int i = 0; i < intArray.length; i++) {
 			System.out.println(intArray[i]);
 		}
 
-		
 	}
 
 }
