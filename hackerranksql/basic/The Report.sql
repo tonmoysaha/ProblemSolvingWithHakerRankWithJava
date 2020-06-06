@@ -1,0 +1,2 @@
+select (case when grade < 8 then null else name end) name, grade, marks from students , grades where marks  between min_mark and max_mark order by grade desc, name, decode(name,NULL,marks);
+--Using decode, you order by marks only when the name is NULL.
