@@ -1,0 +1,1 @@
+select distinct(CITY) from STATION where not (UPPER(SUBSTR(CITY,LENGTH(CITY),1)) in ('A','E','I','O','U') or  UPPER(SUBSTR(CITY,1,1)) in ('A','E','I','O','U'));
