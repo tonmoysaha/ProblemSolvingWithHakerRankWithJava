@@ -1,0 +1,1 @@
+select abs(round((min(LAT_N)-max(LAT_N))+(min(LONG_W)-max(LONG_W)),4)) as distance from STATION;
