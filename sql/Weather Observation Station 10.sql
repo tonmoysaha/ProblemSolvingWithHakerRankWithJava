@@ -1,0 +1,1 @@
+select distinct(CITY) from STATION where not UPPER(SUBSTR(CITY,LENGTH(CITY),1)) in ('A','E','I','O','U');
