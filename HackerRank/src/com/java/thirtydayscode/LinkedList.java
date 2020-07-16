@@ -2,10 +2,10 @@ package com.java.thirtydayscode;
 
 import java.util.Scanner;
 
-<<<<<<< HEAD
 public class LinkedList {
 
 	public static Node insert(Node head, int data) {
+		
 		Node current = head;
 		Node node = new Node(data);
 
@@ -53,25 +53,3 @@ class Node {
 		next = null;
 	}
 }
-=======
-import org.w3c.dom.Node;
-
-public class LinkedList {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		 Scanner sc = new Scanner(System.in);
-//	        Node head = null;
-//	        int N = sc.nextInt();
-//
-//	        while(N-- > 0) {
-//	            int ele = sc.nextInt();
-//	            head = insert(head,ele);
-//	        }
-//	        display(head);
-//	        sc.close();
-
-	}
-
-}
->>>>>>> 78fb7e35bfb8b28e40c791bd770983f71c7e920d
