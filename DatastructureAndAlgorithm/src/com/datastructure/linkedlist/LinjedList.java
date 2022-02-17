@@ -11,13 +11,14 @@ public class LinjedList {
         head = insertAtAnyPosition(head, 10, 2);
         head = insertLast(head, 10);
         int count = countList(head);
+//        bubbleSortList(head, count);
         System.out.println(count);
         System.out.println("linked list");
         printList(head);
         head = reverseList(head);
         System.out.println("reverse linked list");
         printList(head);
-        //        head = deleteFirst(head);
+//        head = deleteFirst(head);
 //        head = deleteLast(head);
 //        head = deleteAAnyKey(head, 4);
     }
@@ -43,6 +44,12 @@ public class LinjedList {
         Node newNode = new Node(i);
         newNode.next = head;
         return newNode;
+    }
+
+    private static void insertFirst2(Node head, int i) {
+        Node newNode = new Node(i);
+        newNode.next = head;
+        head=newNode;
     }
 
     private static Node insertLast(Node head, int i) {
@@ -117,16 +124,27 @@ public class LinjedList {
     }
 
     public static Node reverseList(Node head) {
-        Node current = head, prev =null, nextNode;
+        Node current = head, prev = null, nextNode;
         while (current != null) {
             nextNode = current.next;
             current.next = prev;
-            prev =  current;
+            prev = current;
             current = nextNode;
         }
         head = prev;
         return head;
     }
+
+//    public static Node bubbleSortList(Node head, int count) {
+//        Node n1, n2;
+//        int k = count;
+//        for (int i = 0 ; i< count; i++){
+//            for (int j=1; j< k; j++){
+//
+//            }
+//        }
+//        return null;
+//    }
 
 }
 
@@ -137,5 +155,13 @@ class Node {
 
     public Node(int data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                ", next=" + next +
+                '}';
     }
 }
